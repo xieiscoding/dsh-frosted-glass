@@ -1,0 +1,7 @@
+node_modules/
+native/patch-state.json
+*.bak
+main.patched.mjs
+*.log
+.DS_Store
+Thumbs.db
