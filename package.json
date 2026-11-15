@@ -1,5 +1,5 @@
 {
-  "name": "dsh-desktop-glass",
+  "name": "dsh-frosted-glass",
   "version": "2.0.0",
   "description": "Native Windows 11 acrylic frosted glass for the DeepSeek Harness desktop window: one continuous pane over the live desktop, floating glass for the composer and sent messages, with a reversible shell adaptation and a sampling fallback.",
   "license": "MIT",
