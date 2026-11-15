@@ -1,4 +1,4 @@
-# DSH Desktop Glass · 桌面磨砂玻璃
+# dsh-frosted-glass · 桌面磨砂玻璃
 
 给 **DeepSeek Harness Desktop** 的 Windows 原生亚克力磨砂玻璃插件。
 
@@ -36,19 +36,19 @@
 
 在 Harness 的插件管理页安装本仓库：
 
-- 从 GitHub 安装：仓库地址填 `https://github.com/<your-name>/dsh-desktop-glass`
+- 从 GitHub 安装：仓库地址填 `https://github.com/xieiscoding/dsh-frosted-glass`
 - 或把本目录放到本机，用插件管理页的「从本地目录安装」
 
 也可以使用 DSH CLI（以当前版本支持为准）：
 
 ```powershell
-dsh plugin --profile desktop add github:<your-name>/dsh-desktop-glass
+dsh plugin --profile desktop add github:<your-name>/dsh-frosted-glass
 ```
 
 安装后插件位于：
 
 ```text
-%USERPROFILE%\.dsh\profiles\desktop\node_modules\dsh-desktop-glass
+%USERPROFILE%\.dsh\profiles\desktop\node_modules\dsh-frosted-glass
 ```
 
 ### 2. 原生亚克力适配（推荐）
@@ -64,14 +64,14 @@ dsh plugin --profile desktop add github:<your-name>/dsh-desktop-glass
 **A. 从已安装的插件目录运行（推荐）**
 
 ```bat
-cd /d "%USERPROFILE%\.dsh\profiles\desktop\node_modules\dsh-desktop-glass"
+cd /d "%USERPROFILE%\.dsh\profiles\desktop\node_modules\dsh-frosted-glass"
 native\apply-glass.cmd
 ```
 
 **B. 从本仓库目录运行，并指定 DSH 安装目录**
 
 ```bat
-cd /d "X:\path\to\dsh-desktop-glass"
+cd /d "X:\path\to\dsh-frosted-glass"
 native\apply-glass.cmd "D:\Path\To\DeepSeek Harness"
 ```
 
@@ -97,7 +97,7 @@ native\apply-glass.cmd "D:\Path\To\DeepSeek Harness"
 | 悬浮层玻璃浓度 | 72% | 输入框与消息气泡的磨砂浓度 |
 | 页面高斯模糊 / 背景采样帧率 / 自动节能 | — | **只在后备采样模式下显示**；原生模式由 Windows 合成，不需要帧率 |
 
-设置保存在页面 `localStorage`（`dsh-desktop-glass:settings:v1`），不写入 DSH profile。
+设置保存在页面 `localStorage`（`dsh-frosted-glass:settings:v1`），不写入 DSH profile。
 
 ## 原生模式与后备模式
 
@@ -139,7 +139,7 @@ native\restore-glass.cmd "D:\Path\To\DeepSeek Harness"
 恢复会从以下备份复制回 `app.asar`，并删除适配标记：
 
 ```text
-<DSH install>\resources\app.asar.dsh-desktop-glass.bak
+<DSH install>\resources\app.asar.dsh-frosted-glass.bak
 ```
 
 > 如果安装补丁后 Harness 无法启动，也可以直接运行恢复脚本；它不依赖 Harness 运行。
@@ -171,7 +171,7 @@ flowchart LR
 ## 目录结构
 
 ```text
-dsh-desktop-glass/
+dsh-frosted-glass/
 ├─ index.js                     Host 半部：材质探测、状态/控制路由、采样器管理
 ├─ client.js                    Client 半部：玻璃样式、设置页、帧轮询、原生/后备切换
 ├─ cordis.patch.yml             把插件挂进 profile 的 bundle patch
